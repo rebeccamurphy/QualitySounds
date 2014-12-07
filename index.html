@@ -26,6 +26,20 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+    window.onload = function(){
+        if (sessionStorage.getItem('admin')===true){
+            document.getElementById('loginSwitch').innerHTML='<a href="logout.html">Logout</a>';
+            
+            var host = (window.location.host=="localhost:8000/shop.html")?window.location.host: "rebeccamurphy.github.io/QualitySounds/shop.html";
+            if ((host == window.location.host) && (window.location.protocol != "https:"))
+                window.location.protocol = "https";
+            
+        }
+        else
+            document.getElementById('loginSwitch').innerHTML='<a href="login.html">Login</a>';
+    }
+    </script>
 
 </head>
 
@@ -65,9 +79,9 @@
                     <li>
                         <a href="faq.html">FAQ</a>
                     </li>
-                    <li>
-                        <a href="#">Login</a>
+                    <li id = "loginSwitch">
                     </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
