@@ -27,19 +27,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
+    var host ="rebeccamurphy.github.io";
+            if ((host == window.location.host) && (window.location.protocol != "https:"))
+                window.location.protocol = "https";
     window.onload = function(){
         if (sessionStorage.getItem('admin')=='true'){
             document.getElementById('loginSwitch').innerHTML='<a href="logout.html">Logout</a>';
-            
-            var host ="rebeccamurphy.github.io";
-            if ((host == window.location.host) && (window.location.protocol != "https:"))
-                window.location.protocol = "https";
-            
         }
         else{
             document.getElementById('loginSwitch').innerHTML='<a href="login.html">Login</a>';
-
-
         }
     }
     </script>
@@ -111,7 +107,7 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://cdn.morguefile.com/imageData/public/files/s/Sgarton/10/l/1382590084mrq6g.jpg" alt="">
+                            <img src="images/sheetmusic.jpg" alt="">
                             <div class="caption">
                                 <h4 class="pull-right">$24.99</h4>
                                 <h4><a href="#">Sheet Music</a>
@@ -133,7 +129,7 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://cdn.morguefile.com/imageData/public/files/d/DLChart/10/l/1414690882x629t.jpg" alt="" style="height:173px">
+                            <img src="images/violin.jpg" alt="" style="height:173px">
                             <div class="caption">
                                 <h4 class="pull-right">$64.99</h4>
                                 <h4><a href="#">Violin</a>
@@ -155,12 +151,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://cdn.morguefile.com/imageData/public/files/p/placardmoncoeur/02/l/13933806783pvzp.jpg" alt="" style="height:173px">
+                            <img src="images/piano.jpg" alt="" style="height:173px">
                             <div class="caption">
                                 <h4 class="pull-right">$74.99</h4>
                                 <h4><a href="#">Piano Lessons</a>
                                 </h4>
-                                <p>Held in store or location of your choosing.</p>
+                                <p>Held in store.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
