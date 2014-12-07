@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quality Sounds</title>
+    <title>About</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +27,22 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+    window.onload = function(){
+        debugger;
+        if (sessionStorage.getItem('admin')=='true'){
+            document.getElementById('loginSwitch').innerHTML='<a href="logout.html">Logout</a>';
+              var host ="rebeccamurphy.github.io";
+            if ((host == window.location.host) && (window.location.protocol != "https:"))
+                window.location.protocol = "https";
+        }
+        else{
+            document.getElementById('loginSwitch').innerHTML='<a href="login.html">Login</a>';
+            window.location.protocol = "http";
+        }
+
+    }
+    </script>
 
 </head>
 
@@ -57,17 +74,17 @@
                         <a href="contact.html">Contact</a>
                     </li>
                     <li >
-                        <a href="#">Shop</a>
+                        <a href="shop.html">Shop</a>
                     </li>
                     <li>
-                        <a href="blog-home-1.html">Blog</a>    
+                        <a href="blog.html">Blog</a>    
                     </li>
                     <li>
                         <a href="faq.html">FAQ</a>
                     </li>
-                    <li>
-                        <a href="#">Login</a>
+                    <li id = "loginSwitch">
                     </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

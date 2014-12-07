@@ -5,6 +5,7 @@ function Login(){
 
 	if (email==='admin@qualitysounds.com' && password ==='admin'){
 		sessionStorage.setItem('admin', true);
+		alert('Login Successful');
 		document.getElementById('home').click();
 	}
 	else {
