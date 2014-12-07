@@ -26,14 +26,16 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
     <script type="text/javascript">
+    debugger;
     if (sessionStorage.getItem('admin')=='true'){
             var host ="rebeccamurphy.github.io";
             if ((host == window.location.host) && (window.location.protocol != "https:"))
-                window.location.protocol = "https";
+                window.location.protocol = "https:";
     }
-    else{
-        window.location.protocol = "http";
+    else if (window.location.protocol!='http:'){
+        window.location.protocol='http';
     }
     window.onload = function(){
         if (sessionStorage.getItem('admin')=='true'){
@@ -44,7 +46,7 @@
         }
     }
     </script>
-
+    
 </head>
 
 <body>
