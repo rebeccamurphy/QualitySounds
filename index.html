@@ -27,15 +27,17 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript">
-    window.location.protocol = "http";
-    window.onload = function(){
-        if (sessionStorage.getItem('admin')=='true'){
-            document.getElementById('loginSwitch').innerHTML='<a href="logout.html">Logout</a>';
-            
+    if (sessionStorage.getItem('admin')=='true'){
             var host ="rebeccamurphy.github.io";
             if ((host == window.location.host) && (window.location.protocol != "https:"))
                 window.location.protocol = "https";
-            
+    }
+    else{
+        window.location.protocol = "http";
+    }
+    window.onload = function(){
+        if (sessionStorage.getItem('admin')=='true'){
+            document.getElementById('loginSwitch').innerHTML='<a href="logout.html">Logout</a>';
         }
         else{
             document.getElementById('loginSwitch').innerHTML='<a href="login.html">Login</a>';
